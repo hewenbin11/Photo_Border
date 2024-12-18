@@ -1,0 +1,125 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        x:Class="Photo_Border.Splash_Screen"
+        Title=""
+		RequestedThemeVariant="Light"
+		Width="380"
+		Height="200"
+		RenderOptions.BitmapInterpolationMode="HighQuality"
+		WindowStartupLocation="CenterScreen"
+        BorderThickness="0"
+        WindowState="Normal"
+        CanResize="False"
+		SystemDecorations="None"
+        ExtendClientAreaChromeHints="NoChrome"
+        ExtendClientAreaToDecorationsHint="True"
+        Background="Transparent">
+
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="150" />
+			<RowDefinition Height="50" />
+		</Grid.RowDefinitions>
+
+		<Grid Grid.Row="0"
+			  Background="White">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="150" />
+				<ColumnDefinition Width="225" />
+			</Grid.ColumnDefinitions>
+
+			<Grid
+				Grid.Column="0">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="110"/>
+					<RowDefinition Height="40"/>
+				</Grid.RowDefinitions>
+
+				<Grid Grid.Row="0">
+					<TextBlock
+						Text="印迹"
+						FontFamily="{DynamicResource DeyiBlack}"
+						Foreground="#FF6963"
+						FontSize="48"
+						Margin="33,50,0,0"></TextBlock>
+				</Grid>
+				<Grid Grid.Row="1" >
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="75"/>
+						<ColumnDefinition Width="75"/>
+					</Grid.ColumnDefinitions>
+					
+					<TextBlock
+						Grid.Column="0"
+						FontFamily="{DynamicResource MiSansLight}"
+						FontSize="16"
+						Margin="29,6,3,0">
+						Version</TextBlock>
+					
+					<TextBlock
+						Grid.Column="1"
+						FontFamily="{DynamicResource MiSansLight}"
+						x:Name="Version_Num"
+						FontSize="16"
+						Margin="0,6,0,0"
+						Text="1.0.0"
+						>
+					</TextBlock>
+					
+				</Grid>
+
+			</Grid>
+
+			<Grid Grid.Column="1" >
+				<Canvas x:Name="Camera_bg">
+					<Svg  Path="/Assets/SVG/camera.svg"
+						  Width="277"
+						  Height="253"
+						  Margin="10,4,0,0" />
+				</Canvas>
+			</Grid>
+		</Grid>
+
+		<Grid Grid.Row="1"
+			  Background="#FF977C">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="275" />
+				<ColumnDefinition Width="100" />
+			</Grid.ColumnDefinitions>
+			<Grid
+				Grid.Column="0">
+
+				<TextBlock
+					FontFamily="{DynamicResource MiSansRegular}"
+					Margin="16,17,0,0"
+					FontSize="12"
+					Foreground="#f6f6f6">
+					Made by HiSeatown
+				</TextBlock>
+				
+			</Grid>
+
+			<Grid
+				Grid.Column="1">
+				<Canvas
+					x:Name="Bottom_Bar"
+					HorizontalAlignment="Center"
+					 VerticalAlignment="Center">
+					<TextBlock
+						FontFamily="{DynamicResource Nunito}"
+						Foreground="White"
+						Margin="-23,-16,0,0"
+						FontSize="11">Powered by</TextBlock>
+					<Svg
+						Width="94"
+						Height="14"
+						Path="/Assets/SVG/AvaloniaUI_White.svg"
+						Margin="-50,0,0,0" />
+				</Canvas>
+			</Grid>
+		</Grid>
+	</Grid>
+</Window>

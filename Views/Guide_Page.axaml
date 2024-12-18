@@ -1,0 +1,94 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Photo_Border.Guide_Page"
+        Title="Guide_Page"
+		Width="600"
+		Height="338"
+		Design.Width="600"
+		Design.Height="338"
+		RenderOptions.BitmapInterpolationMode="HighQuality"
+		WindowStartupLocation="CenterScreen"
+        BorderThickness="0"
+		WindowState="Normal"
+        CanResize="False"
+		SystemDecorations="None"
+		RequestedThemeVariant="Light">
+
+	<Window.Styles>
+		<!-- 全局样式定义 -->
+	</Window.Styles>
+
+	<Grid
+		Background="Blue">
+		<Carousel Name="Guide_Page_Slides">
+			<Carousel.PageTransition>
+				<CompositePageTransition>
+					<PageSlide Duration="0:00:00.150" Orientation="Horizontal" />
+				</CompositePageTransition>
+			</Carousel.PageTransition>
+			<Carousel.Items>
+				<Image Source="avares://Photo_Border/Assets/PNG/img1.png" />
+				<Image Source="avares://Photo_Border/Assets/PNG/img2.png" />
+				<Image Source="avares://Photo_Border/Assets/PNG/img3.png" />
+			</Carousel.Items>
+		</Carousel>
+
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="50" />
+				<RowDefinition Height="288" />
+			</Grid.RowDefinitions>
+
+			<Grid  Grid.Row="0">
+				<Button
+					x:Name="Button_Close_Guide"
+					Width="45"
+					Height="40"
+					Margin="520,50,65,0"
+					Opacity="1"
+					Classes ="Tertiary"
+					Theme="{DynamicResource SolidButton}"
+					CornerRadius="12"
+					Click="Button_Close_Guide_Click">
+					<Canvas
+						Width="45"
+						Height="40">
+						<Svg
+							Path="/Assets/Icons/icon-close-false.svg"
+							Width="30"
+							 Height="30"
+							Margin="7.5,5,0,0" />
+					</Canvas>
+				</Button>
+			</Grid>
+
+			<Grid Grid.Row="1">
+				<Button
+					Width="50"
+					Height="180"
+					Margin="-450,0,0,0"
+					Click="Previous"
+					Opacity="0.6"
+					FontSize="30"
+					Classes="Tertiary"
+					Theme="{DynamicResource SolidButton}"
+					CornerRadius="15"
+					>&lt;</Button>
+				<Button
+					Width="50"
+					Height="180"
+					Margin="0,0,-450,0"
+					Opacity="0.6"
+					Click="Next"
+					FontSize="30"
+					Classes="Tertiary"
+					Theme="{DynamicResource SolidButton}"
+					CornerRadius="15"
+				>&gt;</Button>
+			</Grid>
+		</Grid>
+	</Grid>
+</Window>

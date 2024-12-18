@@ -1,0 +1,231 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="350" d:DesignHeight="400"
+        x:Class="Photo_Border.About_Page"
+        Title="About_Page"
+		Height="400"
+		Width="350"
+		RequestedThemeVariant="Light"
+		ExtendClientAreaToDecorationsHint="True"
+		SystemDecorations="None"
+		ExtendClientAreaChromeHints="SystemChrome"
+		WindowStartupLocation="CenterOwner"
+		CanResize="False"
+		Icon="/Assets/PNG/Yinji_Icon2-1.png"
+		xmlns:local="clr-namespace:Photo_Border.ViewModels"
+		x:DataType="local:About_PageViewModel"
+		>
+
+	
+	
+	<Grid
+		Background="Transparent">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="30" />
+			<RowDefinition Height="120" />
+			<RowDefinition Height="100" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+
+		<!--顶部标题栏-->
+		<Grid
+			Grid.Row="0"
+			Background="Transparent">
+			<TextBlock
+				Margin="10,10,0,0"
+				FontFamily="{DynamicResource MiSansRegular}"
+				FontSize="13"
+				Opacity="0.4">
+
+				关于印迹
+			</TextBlock>
+
+			<!--窗口关闭按钮-->
+			<Button HorizontalAlignment="Right"
+				VerticalAlignment="Top"
+				Background="Transparent"
+				Width="40"
+				Height="25"
+				Click="Button_About_Close_click"
+					Command="{Binding About_PageCloseCommand}">
+				<Svg Path="/Assets/SVG/Close.svg"
+					 Width="20" />
+			</Button>
+		</Grid>
+
+		<Grid
+			Grid.Row="1"
+			Background="Transparent">
+
+			<!--logo-->
+			<Border
+
+				CornerRadius="24"
+				BoxShadow="4 10 20 0 DarkGray"
+				Width="95"
+				Height="95"
+				Margin="0">
+				<Image Source="/Assets/PNG/Yinji_Icon2-0.png"
+				  ></Image>
+			</Border>
+		</Grid>
+
+		<Grid
+			Grid.Row="2"
+			Background="Transparent">
+
+			<TextBlock
+				HorizontalAlignment="Center"
+				Background="Transparent"
+				FontFamily="{DynamicResource MiSansRegular}"
+				Foreground="#7c7c7c"
+				FontSize="24"
+				Margin="0,18,0,0"
+					>印迹-你的时光便利贴</TextBlock>
+
+			<TextBlock
+				Name="Verson_Text"
+				Background="Transparent"
+				FontFamily="{DynamicResource MiSansRegular}"
+				Foreground="#7c7c7c"
+				FontSize="15"
+				Margin="0,62,0,0"
+				HorizontalAlignment="Center"
+				>Version 0.0.00</TextBlock>
+
+			<Border
+			   Grid.Row="1"
+			   BorderThickness="0,1,0,0"
+			   BorderBrush="#d7d7d7"
+			   Width="280"
+			   VerticalAlignment="Bottom" />
+		</Grid>
+
+		<Grid
+			Grid.Row="3"
+			Background="Transparent">
+
+			<Grid>
+				<Grid>
+					<StackPanel Margin="0,10,0,0"
+								Height="120"
+								Width="280"
+								VerticalAlignment="Top"
+								Orientation="Vertical">
+						<TextBlock
+							Margin="0,2,0,0"
+							HorizontalAlignment="Center"
+							Foreground="#7c7c7c"
+							FontFamily="{DynamicResource MiSansRegular}"
+							FontSize="13"
+							TextWrapping="Wrap"
+							>Produced by HiSeatown</TextBlock>
+						<TextBlock
+							Margin="0,14,0,0"
+							HorizontalAlignment="Center"
+							Foreground="#5c5c5c"
+							FontFamily="{DynamicResource MiSansRegular}"
+							FontSize="10"
+							TextWrapping="Wrap">CopyRight© HiSeatown All Right Reserved.</TextBlock>
+
+						<StackPanel
+							Margin="0,18,0,0"
+							Height="20"
+							Orientation="Horizontal">
+
+							<Button Background="Transparent"
+									Width="100"
+									Margin="40,4,0,0"
+									Name="PdfButton">
+
+								<TextBlock
+									Foreground="#7c7c7c"
+									FontFamily="{DynamicResource MiSansRegular}"
+									FontSize="10.5"
+									Cursor="Hand">
+									版权及隐私声明
+								</TextBlock>
+							</Button>
+
+							<Button
+								Margin="0,4,0,0"
+								Background="Transparent">
+								<TextBlock
+
+									Foreground="#7c7c7c"
+									FontFamily="{DynamicResource MiSansRegular}"
+									FontSize="10.5"
+									TextWrapping="Wrap"
+									Cursor="Hand">
+									开源协议声明
+								</TextBlock>
+							</Button>
+						</StackPanel>
+					</StackPanel>
+				</Grid>
+
+				<StackPanel Orientation="Horizontal">
+
+					<Button Width="35"
+							Height="35"
+							Background="Transparent"
+							Margin="10,108,0,0"
+							Click="Bilibili_Button_Click"
+							>
+						<Image
+						
+						Source="/Assets/PNG/Bilibili.png"
+						Cursor="Hand"
+						Width="30"
+						Margin="0">
+						</Image>
+					</Button>
+
+					<Button Width="35"
+							Height="35"
+							Background="Transparent"
+							Margin="0,108,0,0"
+							Click="Github_Button_Click">
+						<Image
+						Name="Github_Icon"
+						Source="/Assets/PNG/github-box.png"
+						Cursor="Hand"
+						Width="24"
+						Margin="0"
+						   ></Image>
+					</Button>
+					<Button
+						Width="35"
+						Height="35"
+						Background="Transparent"
+						Margin="0,108,0,0"
+						Click="Zhihu_Button_Cilck">
+						<Image
+						Name="Zhihu_Icon"
+						Source="/Assets/PNG/Zhihu.png"
+						Cursor="Hand"
+						Width="24"
+						Margin="0"
+						   ></Image>
+
+					</Button>
+					
+					<TextBlock
+							FontFamily="{DynamicResource Nunito}"
+							Foreground="#0d6efd"
+							Margin="60,120,0,0"
+							FontSize="11">Powered by</TextBlock>
+					<HyperlinkButton
+                          NavigateUri="https://avaloniaui.net/"
+						  Content="Avalonia UI"
+						  FontSize="15"
+						  Margin="11,117,0,0"
+						  FontFamily="{DynamicResource Nunito}">
+					</HyperlinkButton>
+				</StackPanel>
+			</Grid>
+		</Grid>
+	</Grid>
+</Window>

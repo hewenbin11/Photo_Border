@@ -1,0 +1,38 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:semi="https://irihi.tech/semi"
+
+             x:Class="Photo_Border.App"
+             xmlns:local="using:Photo_Border">
+             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+
+    <Application.DataTemplates>
+        <local:ViewLocator/>
+    </Application.DataTemplates>
+  
+    <Application.Styles>
+		<semi:SemiTheme Locale="zh-CN" />
+		<StyleInclude Source="avares://Semi.Avalonia.ColorPicker/Index.axaml" />
+		<StyleInclude Source="avares://Semi.Avalonia.DataGrid/Index.axaml" />
+		<StyleInclude Source="avares://Semi.Avalonia.TreeDataGrid/Index.axaml" />
+    </Application.Styles>
+
+	<Application.Resources>
+		
+		
+		<FontFamily x:Key="DeyiBlack">
+			avares://Photo_Border/Assets/Fonts/SmileySans-Oblique.ttf#得意黑
+		</FontFamily>
+		<FontFamily x:Key="Nunito">
+			avares://Photo_Border/Assets/Fonts/Nunito-Bold.ttf#Nunito Bold
+		</FontFamily>
+
+		<FontFamily x:Key="MiSansLight">
+			avares://Photo_Border/Assets/Fonts/MISANS-LIGHT.ttf#MiSans Light
+		</FontFamily>
+
+		<FontFamily x:Key="MiSansRegular">
+			avares://Photo_Border/Assets/Fonts/MISANS-REGULAR.ttf#MiSans Regular
+		</FontFamily>
+	</Application.Resources>
+</Application>
