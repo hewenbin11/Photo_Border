@@ -55,7 +55,7 @@ public partial class About_Page : Window
 
     private void Github_Button_Click(object sender, RoutedEventArgs e)
     {
-        string githubUrl = "https://github.com/hewenbin11";
+        string githubUrl = "https://github.com/hewenbin11/Photo_Border";
         Process.Start(new ProcessStartInfo(githubUrl) { UseShellExecute = true });
     }
 
@@ -64,4 +64,5 @@ public partial class About_Page : Window
         string zhihuUrl = "https://www.zhihu.com/people/ji-zhi-0";
         Process.Start(new ProcessStartInfo(zhihuUrl) { UseShellExecute = true });
     }
+    //×¢ÊÍ
 }
