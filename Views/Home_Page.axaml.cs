@@ -1,7 +1,8 @@
 using Avalonia.Controls;
 using Avalonia.Input;
 using Photo_Border.ViewModels;
-
+using System.Data.SQLite;
+using Photo_Border.DB;
 namespace Photo_Border;
 
 public partial class Home_Page : Window
@@ -11,8 +12,8 @@ public partial class Home_Page : Window
     public Home_Page()
     {
         InitializeComponent();
-
-        // New_Project_File_Button.Click += SelectFolderDialog;//新建菜单
+        
+        // New_PDDDroject_File_Button.Click += SelectFolderDialog;//新建菜单
 
         Home_Pgae_window = this;
 

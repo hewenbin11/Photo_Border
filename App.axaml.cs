@@ -3,7 +3,8 @@ using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 using System;
 using System.Threading.Tasks;
-
+using Photo_Border.DB;
+using System.Data.SQLite;
 namespace Photo_Border
 {
     public partial class App : Application
@@ -11,6 +12,7 @@ namespace Photo_Border
         public override void Initialize()
         {
             AvaloniaXamlLoader.Load(this);
+            
         }
 
         //public override void OnFrameworkInitializationCompleted()
@@ -33,6 +35,9 @@ namespace Photo_Border
         {
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktopLifetime)
             {
+
+              
+
                 // œ‘ æ∆Ù∂Øª≠√Ê
                 var splashScreen = new Splash_Screen();
                 splashScreen.Show();
