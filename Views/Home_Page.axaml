@@ -61,22 +61,21 @@
 									  InputGesture="ctrl+N"
 									  FontFamily="{DynamicResource MiSansRegular}"
 									  Width="180"
-									  Command="{Binding SelectFolderCommand}"
-									  />
+									  Command="{Binding SelectFolderCommand}" />
 
 							<!-- 第二级菜单：打开 -->
 							<MenuItem Header="打开"
 									  InputGesture="Ctrl+O"
 									  FontFamily="{DynamicResource MiSansRegular}"
-									   Width="180" 
-									  Command="{Binding OpenFileCommand}"/>
+									   Width="180"
+									  Command="{Binding OpenFileCommand}" />
 
 							<!-- 第二级菜单：保存 -->
 							<MenuItem Header="保存"
 									  InputGesture="Ctrl+S"
 									  FontFamily="{DynamicResource MiSansRegular}"
 									   Width="180"
-									  Command="{Binding SaveFileCommand}"/>
+									  Command="{Binding SaveFileCommand}" />
 
 							<!-- 第二级菜单：新建 -->
 							<MenuItem Header="另存为"
@@ -230,13 +229,13 @@
 							<RowDefinition	Height="150" />
 						</Grid.RowDefinitions>
 
-						<Grid Grid.Row="0" 
+						<Grid Grid.Row="0"
 							  Background="Transparent"
 							  Margin="20,30,10,0">
 							<!--<Image Source="/Assets/IMG_2965.jpg"
 								   Margin="20" />-->
 						</Grid>
-						<Grid Grid.Row="1" 
+						<Grid Grid.Row="1"
 							  Background="Transparent"
 							  Margin="20,10,10,30">
 						</Grid>
@@ -244,7 +243,7 @@
 				</Grid>
 				<!--右侧EXIF信息列表-->
 				<Grid
-						Grid.Column="2">				
+						Grid.Column="2">
 					<Rectangle
 						Fill="White"
 						RadiusX="20"
@@ -258,26 +257,33 @@
 						Foreground="Gray"
 						FontFamily="{DynamicResource MiSansRegular}"
 						HorizontalAlignment="Center">EXIF信息</TextBlock>
-					<StackPanel
-						Background="Transparent"
-						Width="280"
-						Margin="00,80,10,20"
-						Orientation="Vertical">
-						<Grid Height="40"
+
+
+					<Grid Background="Transparent"
+						  Margin="0,80,0,30">
+					<ScrollViewer>
+						<StackPanel
+							Background="Transparent"
+							Width="280"
+							Margin="0,0,10,20"
+							Orientation="Vertical">
+
+
+
+							<Grid Height="40"
 							  Background="Transparent"
 							  Margin="30,20,-25,5">
 							<TextBlock
 								VerticalAlignment="Center"
 								FontSize="15"
 								>光圈</TextBlock>
-							<TextBox 
+							<TextBox
 								Width="160"
 								Classes="Large"
 								Watermark="f/"
 								></TextBox>
 						</Grid>
-						
-						
+
 						<Grid Height="40"
 							  Background="Transparent"
 							  Margin="30,10,-25,5">
@@ -308,14 +314,14 @@
 								></TextBox>
 						</Grid>
 
-
 						<Border
 						   Grid.Row="1"
 						   BorderThickness="0,2,0,0"
 						   BorderBrush="#ececec"
 						   Margin="0,20,0,0"
 						   Width="240"
-						   VerticalAlignment="Bottom"/><Grid Height="40"
+						   VerticalAlignment="Bottom" />
+						<Grid Height="40"
 							  Background="Transparent"
 							  Margin="30,15,-25,0">
 							<TextBlock
@@ -328,8 +334,6 @@
 								Classes="Large"
 								></TextBox>
 						</Grid>
-
-						
 
 						<Grid Height="40"
 							  Background="Transparent"
@@ -344,7 +348,7 @@
 								Classes="Large"
 								></TextBox>
 						</Grid>
-						
+
 						<Grid Height="40"
 							  Background="Transparent"
 							  Margin="30,10,-25,0">
@@ -358,16 +362,98 @@
 								Classes="Large"
 								></TextBox>
 						</Grid>
-						
+
 						<Border
 						   Grid.Row="1"
 						   BorderThickness="0,2,0,0"
 						   BorderBrush="#ececec"
 						   Margin="0,20,0,0"
 						   Width="240"
-						   VerticalAlignment="Bottom"/>
-				
-					</StackPanel>
+						   VerticalAlignment="Bottom" />
+
+
+
+						<Grid Height="40"
+	  Background="Transparent"
+	  Margin="30,10,-25,0">
+							<TextBlock
+								VerticalAlignment="Center"
+								FontSize="15"
+								Margin="-15,0,0,0"
+								>相机型号</TextBlock>
+							<TextBox
+								Width="160"
+								Classes="Large"
+								></TextBox>
+						</Grid>
+
+						<Grid Height="40"
+							  Background="Transparent"
+							  Margin="30,10,-25,0">
+							<TextBlock
+								VerticalAlignment="Center"
+								FontSize="15"
+								Margin="-15,0,0,0"
+								>镜头型号</TextBlock>
+							<TextBox
+								Width="160"
+								Classes="Large"
+								></TextBox>
+						</Grid>
+
+						<Border
+						   Grid.Row="1"
+						   BorderThickness="0,2,0,0"
+						   BorderBrush="#ececec"
+						   Margin="0,20,0,0"
+						   Width="240"
+						   VerticalAlignment="Bottom" />
+
+
+
+
+
+						<Grid Height="40"
+	  Background="Transparent"
+	  Margin="30,10,-25,0">
+							<TextBlock
+								VerticalAlignment="Center"
+								FontSize="15"
+								Margin="-15,0,0,0"
+								>相机型号</TextBlock>
+							<TextBox
+								Width="160"
+								Classes="Large"
+								></TextBox>
+						</Grid>
+
+						<Grid Height="40"
+							  Background="Transparent"
+							  Margin="30,10,-25,0">
+							<TextBlock
+								VerticalAlignment="Center"
+								FontSize="15"
+								Margin="-15,0,0,0"
+								>镜头型号</TextBlock>
+							<TextBox
+								Width="160"
+								Classes="Large"
+								></TextBox>
+						</Grid>
+
+						<Border
+						   Grid.Row="1"
+						   BorderThickness="0,2,0,0"
+						   BorderBrush="#ececec"
+						   Margin="0,20,0,0"
+						   Width="240"
+						   VerticalAlignment="Bottom" />
+
+
+						</StackPanel>
+					</ScrollViewer>
+					</Grid>
+
 				</Grid>
 			</Grid>
 		</Grid>
