@@ -192,9 +192,9 @@
 
 			<Grid>
 				<Grid.ColumnDefinitions>
-					<ColumnDefinition Width="200" />
+					<ColumnDefinition Width="260" />
 					<ColumnDefinition Width="*" />
-					<ColumnDefinition Width="300" />
+					<ColumnDefinition Width="360" />
 				</Grid.ColumnDefinitions>
 
 				<!--左侧列表栏-->
@@ -203,7 +203,6 @@
 					Margin="0">
 
 					<Rectangle Fill="White"
-							   Width="180"
 							   RadiusX="20"
 							   RadiusY="20"
 							   Margin="20,20,0,20">
@@ -231,24 +230,140 @@
 							<RowDefinition	Height="150" />
 						</Grid.RowDefinitions>
 
-						<Grid Grid.Row="0" Background="Transparent"
+						<Grid Grid.Row="0" 
+							  Background="Transparent"
 							  Margin="20,30,10,0">
 							<!--<Image Source="/Assets/IMG_2965.jpg"
 								   Margin="20" />-->
 						</Grid>
-						<Grid Grid.Row="1" Background="Transparent"
+						<Grid Grid.Row="1" 
+							  Background="Transparent"
 							  Margin="20,10,10,30">
 						</Grid>
 					</Grid>
 				</Grid>
 				<!--右侧EXIF信息列表-->
 				<Grid
-						Grid.Column="2">
-					<Rectangle Fill="White"
-							   RadiusX="20"
-							   RadiusY="20"
-							   Margin="10,20,20,20">
+						Grid.Column="2">				
+					<Rectangle
+						Fill="White"
+						RadiusX="20"
+						RadiusY="20"
+						Margin="10,20,20,20">
 					</Rectangle>
+
+					<TextBlock
+						Margin="0,46,0,0"
+						FontSize="18"
+						Foreground="Gray"
+						FontFamily="{DynamicResource MiSansRegular}"
+						HorizontalAlignment="Center">EXIF信息</TextBlock>
+					<StackPanel
+						Background="Transparent"
+						Width="280"
+						Margin="00,80,10,20"
+						Orientation="Vertical">
+						<Grid Height="40"
+							  Background="Transparent"
+							  Margin="30,10,-25,0">
+							<TextBlock
+								VerticalAlignment="Center"
+								FontSize="15"
+								>光圈</TextBlock>
+							<TextBox 
+								Width="160"
+								Classes="Large"
+								Watermark="f./."
+								></TextBox>
+						</Grid>
+						
+						
+						<Grid Height="40"
+							  Background="Transparent"
+							  Margin="30,10,-25,0">
+							<TextBlock
+								VerticalAlignment="Center"
+								FontSize="15"
+								Margin="-12,0,0,0"
+								>快门速度</TextBlock>
+							<TextBox
+								Width="160"
+								Classes="Large"
+								Watermark=""
+								></TextBox>
+						</Grid>
+
+						<Grid Height="40"
+							  Background="Transparent"
+							  Margin="30,10,-25,0">
+							<TextBlock
+								VerticalAlignment="Center"
+								FontSize="15"
+								Margin="-6,0,0,0"
+								>感光度</TextBlock>
+							<TextBox
+								Width="160"
+								Classes="Large"
+								Watermark="ISO"
+								></TextBox>
+						</Grid>
+						
+						<Grid Height="40"
+							  Background="Transparent"
+							  Margin="30,10,-25,0">
+							<TextBlock
+								VerticalAlignment="Center"
+								FontSize="15"
+								>光圈</TextBlock>
+							<TextBox
+								Width="160"
+								Classes="Large"
+								></TextBox>
+						</Grid>
+
+						<Border
+						   Grid.Row="1"
+						   BorderThickness="0,2.8,0,0"
+						   BorderBrush="#ececec"
+						   Margin="0,20,0,0"
+						   Width="240"
+						   VerticalAlignment="Bottom"/>
+
+						<Grid Height="40"
+							  Background="Transparent"
+							  Margin="30,10,-25,0">
+							<TextBlock
+								VerticalAlignment="Center"
+								FontSize="15"
+								>光圈</TextBlock>
+							<TextBox
+								Width="160"
+								Classes="Large"
+								></TextBox>
+						</Grid>
+						
+						<Grid Height="40"
+							  Background="Transparent"
+							  Margin="30,10,-25,0">
+							<TextBlock
+								VerticalAlignment="Center"
+								FontSize="15"
+								>光圈</TextBlock>
+							<TextBox
+								Width="160"
+								Classes="Large"
+								></TextBox>
+						</Grid>
+						
+						<Border
+						   Grid.Row="1"
+						   BorderThickness="0,2.8,0,0"
+						   BorderBrush="#ececec"
+						   Margin="0,20,0,0"
+						   Width="240"
+						   VerticalAlignment="Bottom"/>
+				
+					</StackPanel>
 				</Grid>
 			</Grid>
 		</Grid>
