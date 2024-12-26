@@ -3,12 +3,15 @@ using Avalonia.Input;
 using Photo_Border.ViewModels;
 using System.Data.SQLite;
 using Photo_Border.DB;
+using Avalonia.Controls.Notifications;
+using Avalonia.Interactivity;
+using System;
 namespace Photo_Border;
 
 public partial class Home_Page : Window
 {
     public readonly Window Home_Pgae_window;
-
+    
     public Home_Page()
     {
         InitializeComponent();
@@ -40,6 +43,7 @@ public partial class Home_Page : Window
             }
         }
     }
+
 
     ////菜单栏新建，选择文件夹位置
 

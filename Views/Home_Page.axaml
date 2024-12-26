@@ -191,9 +191,9 @@
 
 			<Grid>
 				<Grid.ColumnDefinitions>
-					<ColumnDefinition Width="260" />
+					<ColumnDefinition Width="200" />
 					<ColumnDefinition Width="*" />
-					<ColumnDefinition Width="360" />
+					<ColumnDefinition Width="400" />
 				</Grid.ColumnDefinitions>
 
 				<!--左侧列表栏-->
@@ -209,8 +209,16 @@
 
 					<Grid Background="Transparent"
 						  Margin="30,30,10,30">
+						
 
 						<StackPanel Orientation="Vertical">
+
+							
+
+								<Button 
+									Content="Information"
+									Classes="Success"
+									/>
 						</StackPanel>
 					</Grid>
 				</Grid>
@@ -264,8 +272,8 @@
 					<ScrollViewer>
 						<StackPanel
 							Background="Transparent"
-							Width="280"
-							Margin="0,0,10,20"
+							Width="360"
+							Margin="25,0,10,20"
 							Orientation="Vertical">
 
 
@@ -278,7 +286,7 @@
 								FontSize="15"
 								>光圈</TextBlock>
 							<TextBox
-								Width="160"
+								Width="200"
 								Classes="Large"
 								Watermark="f/"
 								></TextBox>
@@ -293,7 +301,7 @@
 								Margin="-15,0,0,0"
 								>快门速度</TextBlock>
 							<TextBox
-								Width="160"
+								Width="200"
 								Classes="Large"
 								Watermark="S"
 								></TextBox>
@@ -308,7 +316,7 @@
 								Margin="-6,0,0,0"
 								>感光度</TextBlock>
 							<TextBox
-								Width="160"
+								Width="200"
 								Classes="Large"
 								Watermark="ISO"
 								></TextBox>
@@ -318,8 +326,8 @@
 						   Grid.Row="1"
 						   BorderThickness="0,2,0,0"
 						   BorderBrush="#ececec"
-						   Margin="0,20,0,0"
-						   Width="240"
+						   Margin="-30,20,0,0"
+						   Width="300"
 						   VerticalAlignment="Bottom" />
 						<Grid Height="40"
 							  Background="Transparent"
@@ -330,7 +338,7 @@
 								Margin="-15,0,0,0"
 								>相机品牌</TextBlock>
 							<TextBox
-								Width="160"
+								Width="200"
 								Classes="Large"
 								></TextBox>
 						</Grid>
@@ -344,7 +352,7 @@
 								Margin="-15,0,0,0"
 								>相机型号</TextBlock>
 							<TextBox
-								Width="160"
+								Width="200"
 								Classes="Large"
 								></TextBox>
 						</Grid>
@@ -358,7 +366,7 @@
 								Margin="-15,0,0,0"
 								>镜头型号</TextBlock>
 							<TextBox
-								Width="160"
+								Width="200"
 								Classes="Large"
 								></TextBox>
 						</Grid>
@@ -367,9 +375,63 @@
 						   Grid.Row="1"
 						   BorderThickness="0,2,0,0"
 						   BorderBrush="#ececec"
-						   Margin="0,20,0,0"
-						   Width="240"
+						   Margin="-30,20,0,0"
+						   Width="300"
 						   VerticalAlignment="Bottom" />
+
+
+
+						<Grid Height="40"
+							  Background="Transparent"
+							  Margin="30,10,-25,0">
+							<TextBlock
+								VerticalAlignment="Center"
+								FontSize="15"
+								Margin="-15,0,0,0"
+								>拍摄日期</TextBlock>
+							<!--<TextBox
+								Width="200"
+								Classes="Large"
+								></TextBox>-->
+
+							<CalendarDatePicker 
+								Classes="Large"
+								Width="200"
+								SelectedDateFormat="Long"
+								Margin="77,0,0,0"/>
+
+
+
+						</Grid>
+
+						<Grid Height="40"
+							  Background="Transparent"
+							  Margin="30,10,-25,0">
+							<TextBlock
+								VerticalAlignment="Center"
+								FontSize="15"
+								Margin="-15,0,0,0"
+								>时间</TextBlock>
+							<!--<TextBox
+								Width="200"
+								Classes="Large"
+								></TextBox>-->
+
+							<TimePicker UseSeconds="True"
+										Width="380"
+										Classes="Large"
+										Margin="-35,0,0,0"/>
+						</Grid>
+
+						<Border
+						   Grid.Row="1"
+						   BorderThickness="0,2,0,0"
+						   BorderBrush="#ececec"
+						   Margin="-30,20,0,0"
+						   Width="300"
+						   VerticalAlignment="Bottom" />
+
+
 
 
 
@@ -382,7 +444,7 @@
 								Margin="-15,0,0,0"
 								>相机型号</TextBlock>
 							<TextBox
-								Width="160"
+								Width="200"
 								Classes="Large"
 								></TextBox>
 						</Grid>
@@ -396,47 +458,7 @@
 								Margin="-15,0,0,0"
 								>镜头型号</TextBlock>
 							<TextBox
-								Width="160"
-								Classes="Large"
-								></TextBox>
-						</Grid>
-
-						<Border
-						   Grid.Row="1"
-						   BorderThickness="0,2,0,0"
-						   BorderBrush="#ececec"
-						   Margin="0,20,0,0"
-						   Width="240"
-						   VerticalAlignment="Bottom" />
-
-
-
-
-
-						<Grid Height="40"
-	  Background="Transparent"
-	  Margin="30,10,-25,0">
-							<TextBlock
-								VerticalAlignment="Center"
-								FontSize="15"
-								Margin="-15,0,0,0"
-								>相机型号</TextBlock>
-							<TextBox
-								Width="160"
-								Classes="Large"
-								></TextBox>
-						</Grid>
-
-						<Grid Height="40"
-							  Background="Transparent"
-							  Margin="30,10,-25,0">
-							<TextBlock
-								VerticalAlignment="Center"
-								FontSize="15"
-								Margin="-15,0,0,0"
-								>镜头型号</TextBlock>
-							<TextBox
-								Width="160"
+								Width="200"
 								Classes="Large"
 								></TextBox>
 						</Grid>
