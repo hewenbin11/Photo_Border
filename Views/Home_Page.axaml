@@ -265,7 +265,7 @@
 						Orientation="Vertical">
 						<Grid Height="40"
 							  Background="Transparent"
-							  Margin="30,10,-25,0">
+							  Margin="30,20,-25,5">
 							<TextBlock
 								VerticalAlignment="Center"
 								FontSize="15"
@@ -273,29 +273,29 @@
 							<TextBox 
 								Width="160"
 								Classes="Large"
-								Watermark="f./."
+								Watermark="f/"
 								></TextBox>
 						</Grid>
 						
 						
 						<Grid Height="40"
 							  Background="Transparent"
-							  Margin="30,10,-25,0">
+							  Margin="30,10,-25,5">
 							<TextBlock
 								VerticalAlignment="Center"
 								FontSize="15"
-								Margin="-12,0,0,0"
+								Margin="-15,0,0,0"
 								>快门速度</TextBlock>
 							<TextBox
 								Width="160"
 								Classes="Large"
-								Watermark=""
+								Watermark="S"
 								></TextBox>
 						</Grid>
 
 						<Grid Height="40"
 							  Background="Transparent"
-							  Margin="30,10,-25,0">
+							  Margin="30,10,-25,-5">
 							<TextBlock
 								VerticalAlignment="Center"
 								FontSize="15"
@@ -307,27 +307,29 @@
 								Watermark="ISO"
 								></TextBox>
 						</Grid>
-						
-						<Grid Height="40"
-							  Background="Transparent"
-							  Margin="30,10,-25,0">
-							<TextBlock
-								VerticalAlignment="Center"
-								FontSize="15"
-								>光圈</TextBlock>
-							<TextBox
-								Width="160"
-								Classes="Large"
-								></TextBox>
-						</Grid>
+
 
 						<Border
 						   Grid.Row="1"
-						   BorderThickness="0,2.8,0,0"
+						   BorderThickness="0,2,0,0"
 						   BorderBrush="#ececec"
 						   Margin="0,20,0,0"
 						   Width="240"
-						   VerticalAlignment="Bottom"/>
+						   VerticalAlignment="Bottom"/><Grid Height="40"
+							  Background="Transparent"
+							  Margin="30,15,-25,0">
+							<TextBlock
+								VerticalAlignment="Center"
+								FontSize="15"
+								Margin="-15,0,0,0"
+								>相机品牌</TextBlock>
+							<TextBox
+								Width="160"
+								Classes="Large"
+								></TextBox>
+						</Grid>
+
+						
 
 						<Grid Height="40"
 							  Background="Transparent"
@@ -335,7 +337,8 @@
 							<TextBlock
 								VerticalAlignment="Center"
 								FontSize="15"
-								>光圈</TextBlock>
+								Margin="-15,0,0,0"
+								>相机型号</TextBlock>
 							<TextBox
 								Width="160"
 								Classes="Large"
@@ -348,7 +351,8 @@
 							<TextBlock
 								VerticalAlignment="Center"
 								FontSize="15"
-								>光圈</TextBlock>
+								Margin="-15,0,0,0"
+								>镜头型号</TextBlock>
 							<TextBox
 								Width="160"
 								Classes="Large"
@@ -357,7 +361,7 @@
 						
 						<Border
 						   Grid.Row="1"
-						   BorderThickness="0,2.8,0,0"
+						   BorderThickness="0,2,0,0"
 						   BorderBrush="#ececec"
 						   Margin="0,20,0,0"
 						   Width="240"
