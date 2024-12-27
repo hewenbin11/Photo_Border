@@ -23,6 +23,11 @@
 		xmlns:local="clr-namespace:Photo_Border.ViewModels"
 		x:DataType="local:Home_PageViewModel">
 
+	<Window.DataContext>
+		<local:Home_PageViewModel/>
+	</Window.DataContext>
+
+
 	<Grid>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="28" />
@@ -86,7 +91,8 @@
 							<MenuItem Header="导出为"
 									  InputGesture="Ctrl+Alt+S"
 									  FontFamily="{DynamicResource MiSansRegular}"
-									  Width="180" />
+									  Width="180"
+									 />
 
 							<!-- 分隔线 -->
 							<Separator />
@@ -102,7 +108,8 @@
 							<MenuItem Header="退出"
 									  InputGesture="Alt+F4"
 									  FontFamily="{DynamicResource MiSansRegular}"
-									   Width="180" />
+									  Width="180"
+									  Command="{Binding QuitApplicationCommand}"/>
 						</MenuItem>
 
 						<!-- 第一级菜单：编辑 -->
@@ -239,9 +246,16 @@
 
 						<Grid Grid.Row="0"
 							  Background="Transparent"
-							  Margin="20,30,10,0">
-							<!--<Image Source="/Assets/IMG_2965.jpg"
-								   Margin="20" />-->
+							  Margin="30">
+							<Border
+								CornerRadius="24"
+								BoxShadow="4 10 10 0 DarkGray">
+								<Image Source="/Assets/IMG_2965.jpg"
+								   Margin="30"
+									   
+								   />
+							</Border>
+							
 						</Grid>
 						<Grid Grid.Row="1"
 							  Background="Transparent"
@@ -268,12 +282,12 @@
 
 
 					<Grid Background="Transparent"
-						  Margin="0,80,0,30">
-					<ScrollViewer>
+						  Margin="0,80,20,30">
+					<ScrollViewer >
 						<StackPanel
 							Background="Transparent"
 							Width="360"
-							Margin="25,0,10,20"
+							Margin="65,0,10,20"
 							Orientation="Vertical">
 
 
@@ -435,18 +449,17 @@
 
 
 
-						<Grid Height="40"
-	  Background="Transparent"
-	  Margin="30,10,-25,0">
+						<Grid 
+							Height="40"
+							Background="Transparent"
+							Margin="30,10,-25,0">
 							<TextBlock
 								VerticalAlignment="Center"
 								FontSize="15"
 								Margin="-15,0,0,0"
-								>相机型号</TextBlock>
-							<TextBox
-								Width="200"
-								Classes="Large"
-								></TextBox>
+								>拍摄地点</TextBlock>
+							
+							
 						</Grid>
 
 						<Grid Height="40"
@@ -457,10 +470,7 @@
 								FontSize="15"
 								Margin="-15,0,0,0"
 								>镜头型号</TextBlock>
-							<TextBox
-								Width="200"
-								Classes="Large"
-								></TextBox>
+							
 						</Grid>
 
 						<Border

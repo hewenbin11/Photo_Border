@@ -21,7 +21,7 @@ namespace Photo_Border.ViewModels
         {
             _storageProvider = storageProvider;
             _parentWindow = parentWindow;
-            Trace.WriteLine(_parentWindow.ToString() + "00000000000000000000000000000000000000000000000000000000000000");
+            Trace.WriteLine(_parentWindow.ToString() + "父级窗口");
             ShowDialogCommand = new AsyncRelayCommand(ShowDialogAsync);
 
             // 初始化命令
