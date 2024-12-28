@@ -226,6 +226,9 @@
 									Content="Information"
 									Classes="Success"
 									/>
+							<ColorPicker Margin="0" ColorSpectrumShape="Ring">
+								
+							</ColorPicker>
 						</StackPanel>
 					</Grid>
 				</Grid>
