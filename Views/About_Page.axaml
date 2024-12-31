@@ -138,7 +138,7 @@
 							<Button Background="Transparent"
 									Width="100"
 									Margin="40,4,0,0"
-									Name="PdfButton">
+									Click="PdfButton_Click">
 
 								<TextBlock
 									Foreground="#7c7c7c"

@@ -31,7 +31,7 @@ public partial class About_Page : Window
 
     private void PdfButton_Click(object sender, RoutedEventArgs e)
     {
-        string pdfFilePath = "E:/Codes/Avalonia/Photo_Border/Photo_Border/Assets/Document/Policy.pdf"; // 替换为你的PDF文件路径
+        string pdfFilePath = "D:\\Codes\\Avalonia\\Photo_Border\\Photo_Border\\Assets\\Document\\Policy.pdf"; // 替换为你的PDF文件路径
         OpenPdfFile(pdfFilePath);
     }
 

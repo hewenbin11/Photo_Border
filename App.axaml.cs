@@ -43,7 +43,7 @@ namespace Photo_Border
                 splashScreen.Show();
 
                 // 异步等待 2 秒
-                await Task.Delay(TimeSpan.FromSeconds(2));
+                await Task.Delay(TimeSpan.FromSeconds(3));
 
                 // 创建并显示主页
                 var homePage = new Home_Page();
